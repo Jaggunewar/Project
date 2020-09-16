@@ -7,6 +7,7 @@ from blog.forms import CreateBlogPostForm, UpdateBlogPostForm
 from account.models import Account
 
 # Create your views here.
+
 def create_blog_view(request):
 
     context = {}
@@ -43,8 +44,8 @@ def edit_blog_view(request, slug):
     if not user.is_authenticated:
         return redirect("must_authenticate")
 
-    if blog_post.author !=user:
-        return HttpResponse("You are not the author of that post.")
+    # if blog_post.author !=user:
+    #     return HttpResponse("You are not the author of that post.")
 
     blog_post = get_object_or_404(BlogPost, slug=slug)
     if request.POST:
