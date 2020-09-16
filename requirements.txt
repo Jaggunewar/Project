@@ -12,3 +12,4 @@ six==1.15.0
 sqlparse==0.3.1
 urllib3==1.25.10
 virtualenv==20.0.31
+whitenoise==5.2.0
